@@ -2,19 +2,23 @@ import styles from './TodoList.module.css';
 import { myTasks } from '../Data/data';
 import { useState } from 'react';
 import Task from '../Task';
+import { addTask } from '../Data/data';
 
 
 
 function TodoList () {
     const [name,setName] = useState("")
+    const [allTasks, setAllTasks] = useState(myTasks)
 
-    const listTaches = myTasks.map(tache=>
+    const listTaches = allTasks.map(tache=>
         <Task key={tache.id} {...tache}/> //Pour chaque tache (...), ça affiche ce qui est dans le composant Task
       )
 
     function changeVal(e){
         e.preventDefault() /* Évite que ça repasse directement sur du vide quand on submit */
-        alert(name)
+        setAllTasks([...addTask(name)])
+        alert("Ajout de la tache : " + name)
+        setName("")
     }
 
 

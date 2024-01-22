@@ -13,8 +13,6 @@ function Task (props) {
         setBarre(!barre) /* définit la variable barre sur l'inverse (avec !) de barre */
     }
 
-    console.log(props)
-
 
     return (
         <li 
