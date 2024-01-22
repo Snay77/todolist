@@ -5,7 +5,7 @@ import TodoList from '../TodoList';
 
 function App() {
   let name = "ETHANNN" //Définition d'une variable
-  
+
   return (
     <div className="App">
       Hello {name} !!!
@@ -16,3 +16,5 @@ function App() {
 }
 
 export default App;
+
+{/*  */}
