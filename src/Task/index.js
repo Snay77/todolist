@@ -11,6 +11,9 @@ function Task (props) {
 
     function barrer(){
         setBarre(true) /* définit la variable barre sur l'inverse (avec !) de barre */
+        let v = myTasks.find(x=>x.id===props.id)
+        v.status=true
+        console.log(myTasks)
     }
 
 
@@ -18,7 +21,7 @@ function Task (props) {
         <li 
             className={barre?styles.line:styles.visible} /* définit le style avec un if en fonction de la valeur de barre */
             onDoubleClick={e=>doubleClic(props.name)} 
-            onClick={barrer}/* Quand on clique, execute la fonction barrer */> 
+            onClick={e=>barrer()}/* Quand on clique, execute la fonction barrer */> 
             {props.name} {/* Affiche le champ nom du tableau my tasks définit dans le composant App */}
         </li>
     )
