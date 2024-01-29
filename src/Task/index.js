@@ -10,7 +10,7 @@ function Task (props) {
     }
 
     function barrer(){
-        setBarre(!barre) /* définit la variable barre sur l'inverse (avec !) de barre */
+        setBarre(true) /* définit la variable barre sur l'inverse (avec !) de barre */
     }
 
 
