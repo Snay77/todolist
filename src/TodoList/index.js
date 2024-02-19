@@ -11,7 +11,7 @@ function TodoList () {
     const [allTasks, setAllTasks] = useState(myTasks) //On définit la variable d'état sur le tableau MyTasks
 
     const listTaches = allTasks.map(tache=>
-        <Task key={tache.id} {...tache}/> //Pour chaque tache (...), ça affiche ce qui est dans le composant Task
+        <Task key={tache.id} {...tache}/> //Pour chaque tache (...tache), ça affiche ce qui est dans le composant Task avec en paramèter le tableau tache
     )
 
     function changeVal(e){
