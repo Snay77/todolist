@@ -8,7 +8,7 @@ const myTasks = [
 
 let count = myTasks.length
 
-export function addTask(x){
+export function addTask(x){ /* Ajoute la tache fournie en paramètre */
     count+=1
     myTasks.push({"id":count,"name":x})
     console.log(myTasks)
