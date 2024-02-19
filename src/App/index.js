@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       Hello {name} !!!
       <h2 className={styles.title}>Taches à réaliser</h2> {/* Définit le style sur title qui est dans la variable style qu'on importe */}
-      <TodoList/>
+      <TodoList/> {/* Appelle le composant todolist ne pas oublier de l'importer */}
     </div>
   );
 }
